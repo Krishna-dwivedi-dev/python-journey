@@ -1,3 +1,4 @@
+"""
 # ============================================
 # Day 1 - Python Revision
 # Topics: Variables, Loops, Conditionals, Functions
@@ -165,7 +166,7 @@ student1 = Student("Krishna", 21, [39, 48, 42])
 student2 = Student("Diksha", 20, [45, 43, 38])
 student1.display()
 student2.display()
-
+"""
 
 # ======== Bonus: Bank Account System ========
 class BankAccount:
