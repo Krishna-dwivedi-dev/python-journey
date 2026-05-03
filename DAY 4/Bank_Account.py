@@ -32,7 +32,7 @@ BankAccount1.deposit(90500)
 BankAccount1.withdraw(650000)
 BankAccount1.display()
 
-BankAccount2 = BankAccount("Diksha Makani", 590000)
+BankAccount2 = BankAccount("Manisha Dwivedi", 590000)
 BankAccount2.display()
 BankAccount2.deposit(550000)
 BankAccount2.withdraw(385000)
