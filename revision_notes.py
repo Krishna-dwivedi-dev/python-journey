@@ -291,9 +291,9 @@ print(f"{warrior1.name} has health [{warrior1.health}] and attacks with {warrior
 print(f"{mage1.name} has health [{mage1.health}] and casts {mage1.spell}")
 
 
-# ====================================================
+# ===========================================================
 # Day 6 - Inheritance Overriding + super()
-# =====================================================
+#===========================================================
 
 # --------------------------------------------------
 # Q1 - Inheritance Overriding + super() | Person & Student
