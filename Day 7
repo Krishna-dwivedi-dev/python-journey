@@ -1,0 +1,85 @@
+# Day 7: Encapsulation - Private Attributes, Getters & Setters
+
+# ==========================================
+# Q1: Student Class - Private Marks
+# ==========================================
+class Student:
+    def __init__(self, name, marks):
+        self.__name = name 
+        self.__marks = marks
+
+    def get_name(self):
+        return self.__name
+
+    def get_marks(self):
+        return self.__marks
+
+    def set_marks(self, marks):
+        if marks < 0 or marks > 100:
+            print("Invalid Marks")  
+        else:
+            self.__marks = marks  
+
+Student1 = Student("Krishna Dwivedi", 94) 
+print(Student1.get_name())
+print(Student1.get_marks())
+Student1.set_marks(90)
+print(Student1.get_marks())
+
+
+# ==========================================
+# Q2: Password Class - Private Password
+# ==========================================
+class Password:
+    def __init__(self):
+        self.__password = None
+
+    def set_password(self, p):
+        if len(p) >= 8 and any(char.isdigit() for char in p):
+            self.__password = p
+        else:
+            print("Weak Password!")
+
+    def get_password(self):
+        return self.__password
+
+p1 = Password()
+p1.set_password("abc")         # Weak - too short
+p1.set_password("abcdefg1")   # Valid
+print(p1.get_password())
+
+
+# ==========================================
+# Q3: SecretDiary Class - PIN Protected
+# ==========================================
+class SecretDiary:
+    def __init__(self, pin):
+        self.__entry = ""
+        self.__pin = pin
+
+    def write_entry(self, pin, text):
+        if pin == self.__pin:
+            self.__entry = text
+        else:
+            print("Wrong PIN!")
+
+    def read_entry(self, pin):
+        if self.__pin == pin:
+            return self.__entry
+        else:
+            print("Access Denied!")
+
+    def change_pin(self, old_pin, new_pin):
+        if self.__pin == old_pin:
+            self.__pin = new_pin
+        else:
+            print("old_pin is Incorrect!")
+
+s1 = SecretDiary("Krishna9")
+s2 = SecretDiary("ansh12")    
+s1.write_entry("Krishna9", "Hello! I'm Krishna Dwivedi") 
+s2.write_entry("ansh12", "Hello! I'm ansh dwivedi")  
+s1.change_pin("Krishna9", "Rahul9274")   
+s2.change_pin("ansh12", "Devloper1")  
+print(s1.read_entry("Rahul9274"))
+print(s2.read_entry("Devloper1"))
