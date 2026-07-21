@@ -440,4 +440,3 @@ for i, Notification in enumerate(send):
     Notification.send(message[i])
 
 
-    

@@ -43,7 +43,6 @@ result = load_student()
 print("Loaded students:", result)
 
 
-
 # ============================================================
 # Day 9 - Bonus Project: Employee Salary Manager
 # ============================================================
